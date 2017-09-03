@@ -40,17 +40,17 @@ public class CBFragment extends Fragment implements ICallBack {
                 stra = numa.getText().toString().trim();
                 strb = numb.getText().toString().trim();
                 if (!stra.isEmpty()) {
-                    a =Integer.parseInt(stra) ;
-                }else{
-                    numa.setText(0+"");
+                    a = Integer.parseInt(stra);
+                } else {
+                    numa.setText(0 + "");
                 }
-                if (!strb.isEmpty()){
-                    b =Integer.parseInt(strb) ;
-                }else{
-                    numb.setText(0+"");
+                if (!strb.isEmpty()) {
+                    b = Integer.parseInt(strb);
+                } else {
+                    numb.setText(0 + "");
                 }
-                MainActivity mainActivity= (MainActivity) getActivity();
-                mainActivity.calculate(a,b,CBFragment.this);
+                CBActivity cbActivity = (CBActivity) getActivity();
+                cbActivity.calculate(a, b, CBFragment.this);
             }
         });
         return view;
